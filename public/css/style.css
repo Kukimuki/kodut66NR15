@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 5rem auto;
+    width: 75%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style-type: none;
+}
+    

@@ -1,0 +1,44 @@
+<!-- Define the document type as HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Set the viewport to scale for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the document -->
+    <title>My Wishlist</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Create a div element with class 'container' -->
+    <div class="container">
+        <!-- Create a heading -->
+        <h1>My Wishlist</h1>
+
+        <!-- Create a form that sends a POST request to '/wish' when submitted -->
+        <form action="/wish" method="POST">
+            <!-- Create an input field for the user to enter their wish -->
+            <input type="text" name="userWish" placeholder="add a wish">
+            <!-- Create a submit button for the form -->
+            <button type="submit">Add a wish</button>
+        </form>
+
+        <!-- Create a div element with class 'wishlist' -->
+        <div class="wishlist">
+            <!-- Create an unordered list -->
+            <ul>
+                <!-- Use EJS to loop through each wish in 'myWishes' -->
+                <% for(let i = 0; i < myWishes.length; i++) { %> <!-- i++ same as i = i + 1 --> 
+                    <!-- Use EJS to output the description of the current wish -->
+                    <li><%= myWishes[i]. description %></li>
+                <% } %>
+            </ul>
+        </div>
+
+    </div>
+    
+</body>
+</html>
